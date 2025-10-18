@@ -14,9 +14,10 @@ interface ContactEmailProps {
   email: string;
   social: string;
   message: string;
+  phone : string;
 }
 
-export const ContactEmail = ({ name, email, social, message }: ContactEmailProps) => {
+export const ContactEmail = ({ name, email, social, message , phone }: ContactEmailProps) => {
   return (
     <Html>
       <Head />
@@ -28,6 +29,7 @@ export const ContactEmail = ({ name, email, social, message }: ContactEmailProps
           <Section style={{ borderTop: "1px solid #e5e7eb", paddingTop: "12px" }}>
             <Text><strong>Name:</strong> {name}</Text>
             <Text><strong>Email:</strong> {email}</Text>
+            <Text><strong>Phone Number :</strong> {phone}</Text>
             <Text><strong>Social Handle:</strong> {social}</Text>
             <Text><strong>Message:</strong></Text>
             <Text>{message}</Text>

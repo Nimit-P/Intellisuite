@@ -9,16 +9,17 @@ interface sendEmailPropsType {
     name : string,
     email : string,
     social : string,
-    message : string
+    message : string,
+    phone : string
 }
 
-export const sendEmail = async ({name , email ,social, message} : sendEmailPropsType) => {
+export const sendEmail = async ({name , email ,social, message , phone} : sendEmailPropsType) => {
     try {
         const data = await resend.emails.send({
                             from: "IntelliSuite <onboarding@resend.dev>",
                             to: "info@intellisuite.in",
                             subject: "New Dashboard Request",
-                            react: ContactEmail({ name, email, social, message }),
+                            react: ContactEmail({ name, email, social, message , phone}),
                         });
 
          return true;

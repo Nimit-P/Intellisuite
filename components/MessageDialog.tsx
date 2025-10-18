@@ -1,5 +1,6 @@
 "use client";
 
+
 import { useId, useState, useTransition } from "react";
 import { MessageSquareText } from "lucide-react";
 
@@ -17,6 +18,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "./ui/textarea";
 import { sendEmail } from "@/lib/resend"; // ✅ directly imported server action
 import { toast } from "sonner";
+import ContactInput from "./contactInput";
+import { Spinner } from "./ui/spinner";
 
 type MessageDialogType = {
   title: string;
@@ -40,12 +43,13 @@ export default function MessageDialog({
   const [message, setMessage] = useState("");
   const [isPending, startTransition] = useTransition();
   const [loading ,setLoading] = useState(false);
+   const [phone, setPhone] = useState("")
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     startTransition(async () => {
-      const success = await sendEmail({ name, email, social, message });
+      const success = await sendEmail({ name, email, social, message , phone });
       setLoading(true);
 
       if (success) {
@@ -118,6 +122,9 @@ export default function MessageDialog({
               />
             </div>
             <div className="*:not-first:mt-2">
+                 <ContactInput phoneNumber={phone} setPhoneNumber={setPhone} />
+            </div>
+            <div className="*:not-first:mt-2">
               <Label htmlFor={`social-${id}`}>Social handle</Label>
               <Input
                 id={`social-${id}`}
@@ -143,7 +150,7 @@ export default function MessageDialog({
             disabled={isPending}
             className="w-full bg-black hover:bg-gray-800 text-white px-8 py-6 text-base font-medium"
           >
-            {isPending ? "Sending..." : "Send"}
+            {isPending ? <Spinner/> : "Send"}
           </Button>
 
           <Button
