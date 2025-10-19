@@ -97,7 +97,7 @@ export default function MessageDialog({
           </DialogHeader>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-3">
           <div className="space-y-4">
             <div className="*:not-first:mt-2">
               <Label htmlFor={`name-${id}`}>Name</Label>

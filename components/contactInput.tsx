@@ -20,7 +20,7 @@ export default function ContactInput({phoneNumber, setPhoneNumber } : ContactInp
 
   return (
     <div className="*:not-first:mt-2" dir="ltr">
-      <Label htmlFor={id}>PhoneIcon number input</Label>
+      <Label htmlFor={id}>Contact Number </Label>
       <RPNInput.default
         className="flex rounded-md shadow-xs"
         international

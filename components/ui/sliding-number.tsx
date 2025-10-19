@@ -15,7 +15,7 @@ import useMeasure from 'react-use-measure';
 const TRANSITION: Transition = {
   type: 'spring',
   stiffness: 280,
-  damping: 18,
+  damping: 25,
   mass: 0.3,
 };
 

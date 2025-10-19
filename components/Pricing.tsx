@@ -178,6 +178,14 @@ const PricingSection = ({
                     {plan.description}
                   </p>
                   <div className="flex flex-col gap-2">
+                    {isYearly && (
+                      <div className="flex items-end text-lg text-muted-foreground">
+                        <span className="line-through">
+                          ₹{(plan.monthlyPrice * 12).toLocaleString('en-IN')}
+                        </span>
+                        <span className="text-sm ml-1">/yr</span>
+                      </div>
+                    )}
                     <div className="flex items-end text-4xl font-semibold">
                       <span>
                         ₹

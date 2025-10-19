@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { ChartPieLabelCustom } from './PieChart';
 import { AnimatedBeamDemo } from './AppIntegrations';
-import { BarChart3, CheckCircle, Cloud, Lock, Shield, TrendingUp, Zap } from 'lucide-react';
+import { BarChart3, CheckCircle, Cloud, Lock, Shield, ShieldCheck, TrendingUp, Zap } from 'lucide-react';
 import MessageDialog from './MessageDialog';
 import { ChartTooltipIndicatorLine } from './TooltipChart';
 
@@ -158,13 +158,17 @@ export default function AboutUS() {
               ))}
 
             <div className='p-3 sm:p-4'>
-              <Badge variant="secondary" className="gap-1.5">
+              {/* <Badge variant="secondary" className="gap-1.5">
                 <span
                   className="size-2 rounded-full bg-[#3b82f6]"
                   aria-hidden="true"
                 ></span>
                <span className='text-[14px] text-foreground tracking-wide'>Powered by Google Cloud Security</span>
-              </Badge>
+              </Badge> */}
+            <div className="inline-flex items-center gap-2 rounded-lg bg-green-50 dark:bg-green-950/50 px-4 py-2 text-sm font-medium text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+                <ShieldCheck className="size-4" />
+                <span>Powered by Google Cloud Security</span>
+              </div>
             </div>
           </div>
 
