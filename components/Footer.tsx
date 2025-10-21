@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Instagram, Facebook, Linkedin, Youtube, Globe } from 'lucide-react';
 import Image from 'next/image';
+import ContactForm from './ContactForm';
 
 export default function Footer() {
   return (
@@ -40,11 +41,11 @@ export default function Footer() {
                   </a>
                 </li>
                 <li><a href="#" className="hover:text-white transition">Media Kit</a></li>
-                <li><a href="#" className="hover:text-white transition">Contact</a></li>
+                {/* <li><a href="#" className="hover:text-white transition">Contact</a></li> */}
+                <ContactForm/>
               </ul>
             </div>
 
-            {/* Get Started Links */}
             <div>
               <h3 className="font-semibold mb-4 text-gray-400">Get Started</h3>
               <ul className="space-y-3 text-gray-300">
@@ -60,7 +61,7 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
               {/* Social Icons */}
               <div className="flex items-center gap-4">
-                <a href="#" className="text-gray-400 hover:text-white transition">
+                <a href="https://www.instagram.com/intellisuite.in?igsh=MWpnbTVnbDNuOWUzbQ==" className="text-gray-400 hover:text-white transition">
                   <Instagram  className="w-5 h-5" />
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white transition">

@@ -31,6 +31,7 @@ export default function ContactInput({phoneNumber, setPhoneNumber } : ContactInp
         placeholder="Enter phone number"
         value={phoneNumber}
         onChange={(newValue) => setPhoneNumber(newValue ?? "")}
+        defaultCountry="IN"
       />
     </div>
   )

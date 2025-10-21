@@ -39,15 +39,14 @@ const members = [
 
 function TeamCard({ member }: { member: any }) {
     return (
-        <Card>
+        <Card className="w-full h-full flex flex-col">
             <CardHeader>
                 <CardTitle className="flex justify-center text-[20px] font-semibold text-foreground">{member.name}</CardTitle>
                 <CardDescription className="flex justify-center">
                     <Badge className="text-[#3b82f6] text-md font-semibold" variant={"secondary"}>{member.designation}</Badge>
-                    {/* <h4 className="text-[#3b82f6] text-lg font-semibold"></h4> */}
                 </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-5">
+            <CardContent className="space-y-5 flex-1 flex flex-col">
                 <div className="flex justify-center">
                     <Badge className="flex justify-center text-secondary-foreground" variant='outline'>{member.primarySkill}</Badge>
                 </div>
@@ -78,7 +77,7 @@ export default function TeamSection() {
                 </p>
             </div>
             
-            <div className=" px-4 sm:px-8 md:px-12 lg:px-20 p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 place-items-center">
+            <div className=" px-4 sm:px-8 md:px-12 lg:px-20 p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-fr">
                 {members.map((member, index) => (
                     <TeamCard key={index} member={member} />
                 ))}
