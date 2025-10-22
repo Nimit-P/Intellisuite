@@ -86,7 +86,7 @@ export default function MessageDialog({
           {triggerText}
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="max-h-[90vh] overflow-y-auto sm:max-w-[425px] md:max-w-[550px]">
         <div className="flex flex-col gap-2">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-full border" aria-hidden="true">
             <MessageSquareText className="opacity-80" size={16} />

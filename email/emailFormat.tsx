@@ -12,7 +12,7 @@ import * as React from "react";
 interface ContactEmailProps {
   name: string;
   email: string;
-  social: string;
+  social ?: string;
   message: string;
   phone : string;
 }
@@ -30,7 +30,7 @@ export const ContactEmail = ({ name, email, social, message , phone }: ContactEm
             <Text><strong>Name:</strong> {name}</Text>
             <Text><strong>Email:</strong> {email}</Text>
             <Text><strong>Phone Number :</strong> {phone}</Text>
-            <Text><strong>Social Handle:</strong> {social}</Text>
+            {social && <Text><strong>Social Handle:</strong> {social}</Text>}
             <Text><strong>Message:</strong></Text>
             <Text>{message}</Text>
           </Section>

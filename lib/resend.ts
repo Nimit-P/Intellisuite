@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 interface sendEmailPropsType {
     name : string,
     email : string,
-    social : string,
+    social ?: string,
     message : string,
     phone : string
 }
