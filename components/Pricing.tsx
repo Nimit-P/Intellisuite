@@ -79,8 +79,8 @@ const PricingSection = ({
       },
     },
     {
-      id: "custom",
-      name: "Custom",
+      id: "Enterprise",
+      name: "Enterprise",
       description: "3+ Dashboards + 1-on-1 Analytics",
       monthlyPrice: 5999,
       yearlyPrice: 59999,
@@ -133,13 +133,13 @@ const PricingSection = ({
   const handleToggle = () => {
     const newYearlyState = !isYearly;
     setIsYearly(newYearlyState);
-    
+
     if (newYearlyState) {
       handleClick();
     }
   };
   return (
-    <section className="py-8 mb-10">
+    <section className="py-8 mb-10 flex justify-center">
       <div className="container">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center">
           <h2 className="text-pretty text-4xl font-semibold lg:text-5xl">
@@ -177,37 +177,43 @@ const PricingSection = ({
                   <p className="text-muted-foreground text-sm">
                     {plan.description}
                   </p>
-                  <div className="flex flex-col gap-2">
-                    {isYearly && (
-                      <div className="flex items-end text-lg text-muted-foreground">
-                        <span className="line-through">
-                          ₹{(plan.monthlyPrice * 12).toLocaleString('en-IN')}
-                        </span>
-                        <span className="text-sm ml-1">/yr</span>
+                  <div className="flex flex-col gap-2 ">
+                    {plan.name === "Enterprise" ? (
+                      <div className="flex text-3xl font-bold mt-0 mb-2">
+                        Contact for pricing
                       </div>
-                    )}
-                    <div className="flex items-end text-4xl font-semibold">
-                      <span>
-                        ₹
-                      </span>
-                      <span> 
-                        {isYearly ? <SlidingNumber value={plan.yearlyPrice} /> : <SlidingNumber value={plan.monthlyPrice} />}
-                      </span>
-                      <span className="text-muted-foreground text-2xl font-semibold">
-                        {isYearly ? "/yr" : "/month"}
-                      </span>
-                    </div>
-                    {isYearly && (
-                      <div className="inline-flex items-center gap-1.5 rounded-md bg-green-100 dark:bg-green-950 px-2.5 py-1 text-xs font-semibold text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800 w-fit">
-                        <span>
-                          {plan.id === "basic" && "🎉"}
-                          {plan.id === "pro" && "💪"}
-                          {plan.id === "custom" && "🚀"}
-                        </span>
-                        <span>
-                          Save ₹{(plan.monthlyPrice * 12 - plan.yearlyPrice).toLocaleString('en-IN')}
-                        </span>
-                      </div>
+                    ) : (
+                      <>
+                        {isYearly && (
+                          <div className="flex items-end text-lg text-muted-foreground">
+                            <span className="line-through">
+                              ₹{(plan.monthlyPrice * 12).toLocaleString('en-IN')}
+                            </span>
+                            <span className="text-sm ml-1">/yr</span>
+                          </div>
+                        )}
+                        <div className="flex items-end text-4xl font-semibold">
+                          <span>₹</span>
+                          <span>
+                            {isYearly ? <SlidingNumber value={plan.yearlyPrice} /> : <SlidingNumber value={plan.monthlyPrice} />}
+                          </span>
+                          <span className="text-muted-foreground text-2xl font-semibold">
+                            {isYearly ? "/yr" : "/month"}
+                          </span>
+                        </div>
+                        {isYearly && (
+                          <div className="inline-flex items-center gap-1.5 rounded-md bg-green-100 dark:bg-green-950 px-2.5 py-1 text-xs font-semibold text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800 w-fit">
+                            <span>
+                              {plan.id === "basic" && "🎉"}
+                              {plan.id === "pro" && "💪"}
+                              {plan.id === "custom" && "🚀"}
+                            </span>
+                            <span>
+                              Save ₹{(plan.monthlyPrice * 12 - plan.yearlyPrice).toLocaleString('en-IN')}
+                            </span>
+                          </div>
+                        )}
+                      </>
                     )}
                   </div>
                 </CardHeader>
@@ -226,11 +232,11 @@ const PricingSection = ({
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                    {plan.name !== "Custom" ? (
-                                <MessageDialog title="Start Plan" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText="Start Plan" className="w-full" variantType="default"/>
-                    ) : (
-                                <MessageDialog title="Start Plan" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText="Talk to Sales" className="w-full" variantType="default"/>
-                    ) }
+                  {plan.name !== "Custom" ? (
+                    <MessageDialog title="Start Plan" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText="Start Plan" className="w-full" variantType="default" />
+                  ) : (
+                    <MessageDialog title="Start Plan" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText="Talk to Sales" className="w-full" variantType="default" />
+                  )}
                 </CardFooter>
               </Card>
             ))}

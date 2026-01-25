@@ -27,23 +27,25 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-              Affordable, real-time dashboards for small businesses — built on Google Cloud's secure ecosystem. No code. No hassle. Just insights that drive growth.
+              IntelliSuite helps Indian business owners increase profit, reduce leakages, and regain control using business intelligence and smart automation — without hiring a data team. </p>
+            <p>
+              Sales, expenses, cashflow, inventory, GST, and team performance — consolidated into one simple, founder-friendly view.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <MessageDialog 
-                title="Book a Demo" 
-                description="Book a 20-min demo. We will show templates and onboarding steps." 
-                triggerText="Get Your Free Demo Dashboard" 
-                variantType="default" 
+              <MessageDialog
+                title="Book a Demo"
+                description="Book a 20-min demo. We will show templates and onboarding steps."
+                triggerText="Book a Business Health Check"
+                variantType="default"
                 className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-base font-medium"
               />
-              <MessageDialog 
-                title="Chat with an Expert" 
-                description="Start a chat over WhatsApp or email. Human support during onboarding." 
-                triggerText="Chat with Expert" 
-                variantType="outline" 
+              <MessageDialog
+                title="Chat with an Expert"
+                description="Start a chat over WhatsApp or email. Human support during onboarding."
+                triggerText="Chat with Expert"
+                variantType="outline"
                 className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium"
               />
             </div>
@@ -51,7 +53,7 @@ export default function HeroSection() {
             {/* Reviews Section */}
             <div className="flex items-center gap-4 pt-4">
               <div>
-                <AvatarGroupTooltip/>
+                <AvatarGroupTooltip />
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
@@ -67,8 +69,8 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column - Dashboard Cards */}
-          <MarqueeVertical/>
-          <MarqueeHorizontal/>
+          <MarqueeVertical />
+          <MarqueeHorizontal />
         </div>
       </div>
     </div>

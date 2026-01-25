@@ -69,14 +69,14 @@ function TeamCard({ member }: { member: any }) {
 export default function TeamSection() {
     return (
         <section className="py-12 md:py-25 ">
-        
+
             <div className='mb-12 text-center sm:mb-16 lg:mb-24'>
                 <h2 className='mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl'>Get to Know Our Amazing Team</h2>
                 <p className='text-muted-foreground text-xl'>
                     Meet the Passionate Experts Behind Our Success and Learn More About Their Roles.
                 </p>
             </div>
-            
+
             <div className=" px-4 sm:px-8 md:px-12 lg:px-20 p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-fr">
                 {members.map((member, index) => (
                     <TeamCard key={index} member={member} />

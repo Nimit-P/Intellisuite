@@ -80,7 +80,7 @@ const ReviewCard = ({
 
 export function ReviewCardTestimonials() {
   return (
-    <section className="py-10">
+    <section className="py-10 flex justify-center">
       <div className="container px-4 md:px-6">
         {/* Title Section */}
         <div className="mx-auto max-w-3xl text-center mb-12 md:mb-16">
