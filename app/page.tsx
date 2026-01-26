@@ -12,12 +12,17 @@ import { Feature17 } from "@/components/feature17";
 
 
 
+import OurWork from "@/components/OurWork";
+
 export default function page() {
   return (
     <div className="space-y-2 md:space-y-5">
       <NavBar />
       <section id="hero">
         <HeroSection />
+      </section>
+      <section id="our-work">
+        <OurWork />
       </section>
       <section id="about-us" >
         <AboutUS />

@@ -31,6 +31,47 @@ export default function AboutUS() {
             </CardHeader>
             <CardContent>
               <AnimatedBeamDemo />
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                {/* Card 1 */}
+                <div className="flex flex-col items-start gap-3 rounded-xl border bg-card p-4 text-left shadow-sm transition-all hover:shadow-md bg-white">
+                  <Badge variant="secondary" className="bg-blue-50 text-blue-700 hover:bg-blue-100 border-blue-100">
+                    Common
+                  </Badge>
+                  <div>
+                    <h3 className="text-base font-bold text-gray-900">Google Sheets / Excel</h3>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Bring your existing trackers into a single control view with consistent reporting.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="flex flex-col items-start gap-3 rounded-xl border bg-card p-4 text-left shadow-sm transition-all hover:shadow-md bg-white">
+                  <Badge variant="secondary" className="bg-purple-50 text-purple-700 hover:bg-purple-100 border-purple-100">
+                    Sales
+                  </Badge>
+                  <div>
+                    <h3 className="text-base font-bold text-gray-900">CRM / Billing Data</h3>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Track sales pipeline, conversions, and customer value without manual follow-ups.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="flex flex-col items-start gap-3 rounded-xl border bg-card p-4 text-left shadow-sm transition-all hover:shadow-md bg-white">
+                  <Badge variant="secondary" className="bg-pink-50 text-pink-700 hover:bg-pink-100 border-pink-100">
+                    Marketing
+                  </Badge>
+                  <div>
+                    <h3 className="text-base font-bold text-gray-900">Meta / Ads / Website</h3>
+                    <p className="text-sm text-gray-600 mt-1">
+                      Know what is driving leads and sales, and what is only burning money.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
@@ -49,7 +90,7 @@ export default function AboutUS() {
           </Card>
 
           {/* Automate Reporting Card */}
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
             <CardHeader>
               <div className="text-sm font-medium text-gray-600 mb-2"></div>
               <CardTitle className="text-2xl font-bold mb-2">Who It’s For</CardTitle>
@@ -57,7 +98,7 @@ export default function AboutUS() {
                 Built for Indian Businesses like:
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1 flex flex-col">
               {/* <ChartPieLabelCustom/> */}
               <div className="space-y-3 mb-6">
                 {[
@@ -113,12 +154,14 @@ export default function AboutUS() {
                 </p>
               </div>
 
-              <MessageDialog title='Sample Dashboards' description='We provide Looker Studio template previews for social, sales, and finance dashboards.' triggerText='See Sample Dashboards →' className='w-full' />
+              <div className="mt-auto">
+                <MessageDialog title='Sample Dashboards' description='We provide Looker Studio template previews for social, sales, and finance dashboards.' triggerText='See Sample Dashboards →' className='w-full' />
+              </div>
             </CardContent>
           </Card>
 
           {/* Generate Insights Card */}
-          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+          <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
             <CardHeader>
               <div className="text-sm font-medium text-gray-600 mb-2"></div>
               <CardTitle className="text-2xl font-bold mb-2">Your Data. Your Control.</CardTitle>
@@ -126,7 +169,7 @@ export default function AboutUS() {
                 We take your privacy seriously — every dashboard runs securely on Google’s infrastructure with:
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1 flex flex-col">
               {/* <ChartBarMultiple/> */}
               <div className="space-y-1 mb-6">
                 {[
@@ -149,6 +192,11 @@ export default function AboutUS() {
                     icon: <Shield className="w-5 h-5" />,
                     text: "Compliance-ready setup for GDPR and Indian data protection norms",
                     color: "orange"
+                  },
+                  {
+                    icon: <Lock className="w-5 h-5" />,
+                    text: "Employee Data Restrictions — Staff see only what they need to work",
+                    color: "pink"
                   }
                 ].map((item, i) => (
                   <div
@@ -163,13 +211,6 @@ export default function AboutUS() {
                 ))}
 
                 <div className='p-3 sm:p-4'>
-                  {/* <Badge variant="secondary" className="gap-1.5">
-                <span
-                  className="size-2 rounded-full bg-[#3b82f6]"
-                  aria-hidden="true"
-                ></span>
-               <span className='text-[14px] text-foreground tracking-wide'>Powered by Google Cloud Security</span>
-              </Badge> */}
                   <div className="inline-flex items-center gap-2 rounded-lg bg-green-50 dark:bg-green-950/50 px-4 py-2 text-sm font-medium text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
                     <ShieldCheck className="size-4" />
                     <span>Powered by Google Cloud Security</span>
@@ -177,12 +218,9 @@ export default function AboutUS() {
                 </div>
               </div>
 
-              {/* <div className="flex items-center gap-2 sm:gap-4 p-1 sm:p-2 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl border border-blue-200 mb-2">
-              <Cloud className="w-5 h-5 sm:w-8 sm:h-8 text-blue-[] flex-shrink-0" />
-              <p className="font-semibold text-gray-900 text-sm sm:text-base">Powered by Google Cloud Security</p>
-            </div> */}
-
-              <MessageDialog title='Security Details' description='We use OAuth, end-to-end encryption, and keep dashboards within your Google account — no external storage.' triggerText='Learn How We Keep Your Data Safe' className='w-full' variantType='outline' />
+              <div className="mt-auto">
+                <MessageDialog title='Security Details' description='We use OAuth, end-to-end encryption, and keep dashboards within your Google account — no external storage.' triggerText='Learn How We Keep Your Data Safe' className='w-full' variantType='outline' />
+              </div>
             </CardContent>
           </Card>
 

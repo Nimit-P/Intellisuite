@@ -1,6 +1,7 @@
-"use client";
-
-import { cn } from "@/lib/utils";
+import { DashboardMarquee } from "./DashboardMarquee";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export function DashboardPreview() {
     return (
@@ -8,7 +9,7 @@ export function DashboardPreview() {
             <div className="w-full px-4 md:px-6">
                 <div className="mx-auto max-w-7xl">
                     {/* Header */}
-                    <div className="mb-8 md:mb-12">
+                    <div className="mb-8 md:mb-12 text-center md:text-left">
                         <h2 className="text-2xl font-bold md:text-3xl lg:text-4xl mb-4 text-gray-900">
                             Your Business Control Panel
                         </h2>
@@ -17,26 +18,33 @@ export function DashboardPreview() {
                         </p>
                     </div>
 
-                    {/* Browser Window Frame */}
-                    <div className="rounded-xl overflow-hidden border border-gray-200 shadow-2xl bg-white">
+                    {/* Browser Window Frame with Marquee */}
+                    <div className="rounded-xl overflow-hidden border border-gray-200 shadow-2xl bg-white mb-10">
                         {/* Window Controls */}
                         <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
                             <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
                             <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                             <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
-                            <div className="ml-4 text-xs text-gray-500 font-medium">Embedded Dashboard (Looker Studio)</div>
+                            <div className="ml-4 text-xs text-gray-500 font-medium">Live Dashboard Preview</div>
                         </div>
 
-                        {/* Dashboard Content */}
-                        <div className="aspect-[16/9] w-full bg-white relative">
-                            <iframe
-                                src="https://lookerstudio.google.com/embed/reporting/b69ec576-2182-4c28-8be4-46f275fb241e/page/ASLmF"
-                                className="absolute inset-0 w-full h-full border-0"
-                                allowFullScreen
-                                loading="lazy"
-                                title="Business Control Panel Dashboard"
-                            />
+                        {/* Dashboard Marquee Content */}
+                        <div className="w-full bg-white relative py-8">
+                            <DashboardMarquee />
                         </div>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="flex justify-center">
+                        <Link href="/live-demo">
+                            <Button
+                                size="lg"
+                                className="bg-black hover:bg-gray-800 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all flex items-center gap-2"
+                            >
+                                See how it works
+                                <ArrowRight className="w-5 h-5" />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>
