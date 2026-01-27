@@ -53,7 +53,7 @@ const itemVariants = {
 
 export function HowItWorks() {
     return (
-        <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 md:py-24">
+        <section className="py-12 md:py-24">
             <div className="container px-4 md:px-6 mx-auto max-w-7xl">
                 <div className="mb-12 text-center">
                     <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl text-gray-900 mb-4">

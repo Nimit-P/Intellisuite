@@ -31,10 +31,10 @@ export default function OurWork() {
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 space-y-4">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
-                        What we do <span className="text-gray-500 font-medium">(in simple business language)</span>
+                        What we do <span className="text-gray-500 font-medium"></span>
                     </h2>
                     <p className="text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed">
-                        We are not "just dashboard people." IntelliSuite acts as your
+                        IntelliSuite acts as your
                         Business Intelligence & Automation partner — bringing clarity,
                         control, and predictability to daily decisions.
                     </p>

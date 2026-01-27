@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export function DashboardPreview() {
     return (
-        <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-12 md:py-24">
+        <section className="py-12 md:py-24">
             <div className="w-full px-4 md:px-6">
                 <div className="mx-auto max-w-7xl">
                     {/* Header */}
@@ -21,12 +21,12 @@ export function DashboardPreview() {
                     {/* Browser Window Frame with Marquee */}
                     <div className="rounded-xl overflow-hidden border border-gray-200 shadow-2xl bg-white mb-10">
                         {/* Window Controls */}
-                        <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
+                        {/* <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
                             <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
                             <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                             <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
                             <div className="ml-4 text-xs text-gray-500 font-medium">Live Dashboard Preview</div>
-                        </div>
+                        </div> */}
 
                         {/* Dashboard Marquee Content */}
                         <div className="w-full bg-white relative py-8">

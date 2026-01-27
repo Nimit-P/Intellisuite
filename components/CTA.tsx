@@ -8,8 +8,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { BorderBeam } from "./ui/border-beam" 
+import { BorderBeam } from "./ui/border-beam"
 import MessageDialog from "./MessageDialog"
+import Link from "next/link"
 
 export function CTA() {
   return (
@@ -25,17 +26,16 @@ export function CTA() {
         </CardHeader>
         <CardContent className="px-0 pt-4 sm:pt-6">
           <div className="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 px-2">
-            <MessageDialog 
-              title="Book a Demo" 
-              description="Book a 20-min demo. We will show templates and onboarding steps." 
-              triggerText="Book a Demo" 
+            <MessageDialog
+              title="Book a Business Health Check"
+              description="Book a Business Health Check. We will show templates and onboarding steps."
+              triggerText="Book a Business Health Check"
             />
-            <MessageDialog 
-              title="Chat with an Expert" 
-              description="Start a chat over WhatsApp or email. Human support during onboarding." 
-              triggerText="Chat with an Expert" 
-              variantType="outline"
-            />
+            <Link href={"https://wa.me/message/Q2UVGWRJWAGNA1"}>
+              <Button size="lg" variant={"outline"} className={`border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium cursor-pointer`}>
+                Chat with Expert
+              </Button>
+            </Link>
           </div>
         </CardContent>
         <BorderBeam

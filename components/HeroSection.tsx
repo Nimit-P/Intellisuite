@@ -4,6 +4,8 @@ import { Badge } from '@/components/ui/badge';
 import AvatarGroupTooltip from './Avatar';
 import { MarqueeHorizontal, MarqueeVertical } from './MarqueeCards';
 import MessageDialog from './MessageDialog';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -35,19 +37,24 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <MessageDialog
-                title="Book a Demo"
-                description="Book a 20-min demo. We will show templates and onboarding steps."
+                title="Book a Business Health Check"
+                description="Book a Business Health Check. We will show templates and onboarding steps."
                 triggerText="Book a Business Health Check"
                 variantType="default"
                 className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-base font-medium"
               />
-              <MessageDialog
+              {/* <MessageDialog
                 title="Chat with an Expert"
                 description="Start a chat over WhatsApp or email. Human support during onboarding."
                 triggerText="Chat with Expert"
                 variantType="outline"
                 className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium"
-              />
+              /> */}
+              <Link href={"https://wa.me/message/Q2UVGWRJWAGNA1"}>
+                <Button size="lg" variant={"outline"} className={`border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium cursor-pointer`}>
+                  Chat with Expert
+                </Button>
+              </Link>
             </div>
 
             {/* Reviews Section */}
