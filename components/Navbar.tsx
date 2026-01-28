@@ -1,6 +1,6 @@
 "use client"
 
-import { HouseIcon, InfoIcon, User2Icon, LightbulbIcon, BadgeIndianRupee } from "lucide-react"
+import { HouseIcon, InfoIcon, User2Icon, LightbulbIcon, BadgeIndianRupee, MessageCircle } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
@@ -23,6 +23,7 @@ const navigationLinks = [
   { href: "#about-us", label: "About us", icon: InfoIcon },
   { href: "#team", label: "Team", icon: User2Icon },
   { href: "#pricing", label: "Pricing", icon: BadgeIndianRupee },
+  { href: "https://wa.me/message/Q2UVGWRJWAGNA1", label: "Contact Us", icon: MessageCircle },
 ]
 
 export default function NavBar() {
@@ -116,7 +117,7 @@ export default function NavBar() {
                       className="text-muted-foreground/80"
                       aria-hidden="true"
                     />
-                    <span className="text-[16px]">{link.label}</span>
+                    <span className="text-[16px] truncate">{link.label}</span>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               )

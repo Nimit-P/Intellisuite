@@ -22,12 +22,12 @@ export default function LiveDemoPage() {
             <main className="max-w-7xl mx-auto px-4 py-8 h-[calc(100vh-64px)]">
                 <div className="w-full h-full rounded-xl overflow-hidden border border-gray-200 shadow-xl bg-white flex flex-col">
                     {/* Window Controls */}
-                    <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200 shrink-0">
+                    {/* <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200 shrink-0">
                         <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
                         <div className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
                         <div className="w-3 h-3 rounded-full bg-[#27C93F]" />
                         <div className="ml-4 text-xs text-gray-500 font-medium">Business Control Panel (Live Interactable View)</div>
-                    </div>
+                    </div> */}
 
                     {/* Iframe */}
                     <div className="flex-1 w-full bg-white relative">
