@@ -19,8 +19,8 @@ export default function LiveDemoPage() {
                 </div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-4 py-8 h-[calc(100vh-64px)]">
-                <div className="w-full h-full rounded-xl overflow-hidden border border-gray-200 shadow-xl bg-white flex flex-col">
+            <main className="max-w-7xl mx-auto px-4 py-8">
+                <div className="w-full rounded-xl overflow-hidden border border-gray-200 shadow-xl bg-white flex flex-col">
                     {/* Window Controls */}
                     {/* <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200 shrink-0">
                         <div className="w-3 h-3 rounded-full bg-[#FF5F56]" />
@@ -30,7 +30,7 @@ export default function LiveDemoPage() {
                     </div> */}
 
                     {/* Iframe */}
-                    <div className="flex-1 w-full bg-white relative">
+                    <div className="flex-1 w-full min-h-[1300px] bg-white relative border">
                         <iframe
                             src="https://lookerstudio.google.com/embed/reporting/b69ec576-2182-4c28-8be4-46f275fb241e/page/ASLmF"
                             className="absolute inset-0 w-full h-full border-0"

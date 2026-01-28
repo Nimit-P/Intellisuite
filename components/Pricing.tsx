@@ -81,11 +81,11 @@ const PricingSection = ({
     {
       id: "Enterprise",
       name: "Enterprise",
-      description: "3+ Dashboards + 1-on-1 Analytics",
+      description: "Multiple Dashboards + 1-on-1 Analytics",
       monthlyPrice: 5999,
       yearlyPrice: 59999,
       features: [
-        { text: "3+ Dashboards" },
+        { text: "Multiple Dashboards" },
         { text: "1-on-1 Analytics consultation" },
         { text: "Custom integrations" },
         { text: "Dedicated account manager" },

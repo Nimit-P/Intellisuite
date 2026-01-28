@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Intellisuite",
-  description: "Turn Your Data into Decisions — Instantly.",
+  description: "Affordable, real-time dashboards for small businesses — built on Google Cloud's secure ecosystem. No code. No hassle. Just insights that drive growth.",
   icons: {
     icon: "/intellisuiteCropLogo.png", // or "/my-logo.png"
   },

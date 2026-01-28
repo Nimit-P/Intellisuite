@@ -6,6 +6,8 @@ import { AnimatedBeamDemo } from './AppIntegrations';
 import { BarChart3, Briefcase, CheckCircle, Cloud, Factory, Lock, Shield, ShieldCheck, ShoppingBag, Stethoscope, TrendingUp, Truck, Zap } from 'lucide-react';
 import MessageDialog from './MessageDialog';
 import { ChartTooltipIndicatorLine } from './TooltipChart';
+import { Button } from './ui/button';
+import Link from 'next/link';
 
 export default function AboutUS() {
   return (
@@ -155,7 +157,12 @@ export default function AboutUS() {
               </div>
 
               <div className="mt-auto">
-                <MessageDialog title='Sample Dashboards' description='We provide Looker Studio template previews for social, sales, and finance dashboards.' triggerText='See Sample Dashboards →' className='w-full' />
+                {/* <MessageDialog title='Sample Dashboards' description='We provide Looker Studio template previews for social, sales, and finance dashboards.' triggerText='See Sample Dashboards →' className='w-full' /> */}
+                <Link href="/live-demo">
+                  <Button size="lg" variant="default" className={`w-full`}>
+                    See Sample Dashboards
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
@@ -279,11 +286,11 @@ const FEATURES_DATA = [
 
 function FeaturesCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {FEATURES_DATA.map((feature, index) => (
         <div
           key={index}
-          className="flex flex-col items-start gap-4 rounded-xl border bg-card p-6 text-left shadow-sm transition-all hover:shadow-md"
+          className="flex flex-col items-start gap-4 rounded-xl border bg-card p-6 text-left shadow-sm transition-all hover:shadow-md "
         >
           <Badge variant="secondary" className="bg-blue-50 text-blue-700 hover:bg-blue-100">
             {feature.title}

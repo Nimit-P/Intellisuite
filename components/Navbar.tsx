@@ -16,6 +16,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import Image from "next/image"
+import ContactForm from "./ContactForm"
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -23,7 +24,7 @@ const navigationLinks = [
   { href: "#about-us", label: "About us", icon: InfoIcon },
   { href: "#team", label: "Team", icon: User2Icon },
   { href: "#pricing", label: "Pricing", icon: BadgeIndianRupee },
-  { href: "https://wa.me/message/Q2UVGWRJWAGNA1", label: "Contact Us", icon: MessageCircle },
+  { href: "#", label: "Contact Us", icon: MessageCircle },
 ]
 
 export default function NavBar() {
@@ -101,7 +102,7 @@ export default function NavBar() {
           </div>
         </div>
         {/* Middle area */}
-        <NavigationMenu className="max-md:hidden ">
+        <NavigationMenu className="max-md:hidden">
           <NavigationMenuList className="gap-2">
             {navigationLinks.map((link, index) => {
               const Icon = link.icon
@@ -117,7 +118,7 @@ export default function NavBar() {
                       className="text-muted-foreground/80"
                       aria-hidden="true"
                     />
-                    <span className="text-[16px] truncate">{link.label}</span>
+                    {link.label == "Contact Us" ? <ContactForm /> : <span>{link.label}</span>}
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               )

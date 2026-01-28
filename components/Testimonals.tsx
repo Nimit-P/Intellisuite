@@ -3,28 +3,28 @@ import { Marquee } from "./ui/marquee"
 
 const reviews = [
   {
-    name: "Priya Nair",
-    username: "@priya",
+    name: "Vikas Agarwal",
+    username: "@kkassetsmanagement",
     body: "I stopped guessing and started scaling! My sales grew 20% after I began tracking ad ROI daily.",
-    img: "https://avatar.vercel.sh/priya",
+    img: "https://avatar.vercel.sh/vikas",
   },
   {
-    name: "Rohit Sharma",
-    username: "@rohit",
+    name: "Vinay Agarwal",
+    username: "@Strongpointconsulting",
     body: "The dashboard made my Google Sheet look like a command center. Everything is visual and easy to understand.",
-    img: "https://avatar.vercel.sh/rohit",
+    img: "https://avatar.vercel.sh/vinay",
   },
   {
     name: "Sneha Iyer",
-    username: "@sneha",
+    username: "@balajeerealtors",
     body: "Data visualization has never been this intuitive. Their team turned my raw data into actionable insights.",
-    img: "https://avatar.vercel.sh/sneha",
+    img: "https://avatar.vercel.sh/balajeerealtors",
   },
   {
-    name: "Aarav Mehta",
-    username: "@aarav",
+    name: "Ayush Mishra",
+    username: "@tattvan",
     body: "The dashboards helped us identify hidden trends and improve decision-making across departments.",
-    img: "https://avatar.vercel.sh/aarav",
+    img: "https://avatar.vercel.sh/ayush",
   },
   {
     name: "Dilipp Agarwal",
