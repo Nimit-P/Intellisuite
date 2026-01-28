@@ -22,7 +22,7 @@ const reviews = [
   },
   {
     name: "Ayush Mishra",
-    username: "@tattvan",
+    username: "@avdhootventures",
     body: "The dashboards helped us identify hidden trends and improve decision-making across departments.",
     img: "https://avatar.vercel.sh/ayush",
   },
