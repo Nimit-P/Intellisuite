@@ -30,7 +30,7 @@ export default function LiveDemoPage() {
                     </div> */}
 
                     {/* Iframe */}
-                    <div className="flex-1 w-full min-h-[1300px] bg-white relative border">
+                    <div className="flex-1 w-full min-h-[1350px] bg-white relative border">
                         <iframe
                             src="https://lookerstudio.google.com/embed/reporting/b69ec576-2182-4c28-8be4-46f275fb241e/page/ASLmF"
                             className="absolute inset-0 w-full h-full border-0"
