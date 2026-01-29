@@ -232,7 +232,11 @@ const PricingSection = ({
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <MessageDialog title="Start Plan" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText={plan.button.text} className="w-full" variantType="default" />
+                  {plan.name === "Enterprise" ? (
+                    <MessageDialog title="Talk to Sales" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText={plan.button.text} className="w-full" variantType="default" />
+                  ) : (
+                    <MessageDialog title="Start Plan" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText={plan.button.text} className="w-full" variantType="default" />
+                  )}
                 </CardFooter>
               </Card>
             ))}
