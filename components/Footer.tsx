@@ -62,15 +62,14 @@ export default function Footer() {
               {/* Social Icons */}
               <div className="flex items-center gap-4">
                 <a href="https://www.instagram.com/intellisuite.in?igsh=MWpnbTVnbDNuOWUzbQ==" className="text-gray-400 hover:text-white transition">
-                  <Instagram className="w-5 h-5" />
-                </a>
+                  <Instagram className="w-5 h-5" /></a>
                 <a href="#" className="text-gray-400 hover:text-white transition">
-                  <Linkedin className="w-5 h-5" />                </a>
+                  <Linkedin className="w-5 h-5" /></a>
               </div>
 
               {/* Copyright */}
               <div className="text-gray-400 text-sm">
-                © 2025 Intellisuite pvt.
+                © 2025 Intellisuite
               </div>
 
               {/* Right Links */}
