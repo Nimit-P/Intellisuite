@@ -12,10 +12,10 @@ export default function LiveDemoPage() {
                 <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
                         <ArrowLeft className="w-5 h-5" />
-                        <span className="font-medium">Back to Home</span>
+                        <span className="font-medium hidden sm:inline">Back to Home</span>
                     </Link>
-                    <div className="font-bold text-xl text-gray-900">IntelliSuite <span className="text-blue-600">Live Demo</span></div>
-                    <div className="w-24"></div> {/* Spacer for center alignment */}
+                    <div className="font-bold text-lg sm:text-xl text-gray-900 whitespace-nowrap">IntelliSuite <span className="text-blue-600">Live Demo</span></div>
+                    <div className="w-8 sm:w-24"></div> {/* Spacer for center alignment */}
                 </div>
             </header>
 
