@@ -2,6 +2,7 @@
 
 
 import { useId, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { MessageSquareText } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -42,14 +43,21 @@ export default function MessageDialog({
   const [social, setSocial] = useState("");
   const [message, setMessage] = useState("");
   const [isPending, startTransition] = useTransition();
-  const [loading ,setLoading] = useState(false);
-   const [phone, setPhone] = useState("")
+  const [loading, setLoading] = useState(false);
+  const [phone, setPhone] = useState("")
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleCancel = () => {
+    setOpen(false);
+    router.push("/");
+  };
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     startTransition(async () => {
-      const success = await sendEmail({ name, email, social, message , phone });
+      const success = await sendEmail({ name, email, social, message, phone });
       setLoading(true);
 
       if (success) {
@@ -80,7 +88,7 @@ export default function MessageDialog({
   }
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button size="lg" variant={variantType} className={className}>
           {triggerText}
@@ -122,7 +130,7 @@ export default function MessageDialog({
               />
             </div>
             <div className="*:not-first:mt-2">
-                 <ContactInput phoneNumber={phone} setPhoneNumber={setPhone} />
+              <ContactInput phoneNumber={phone} setPhoneNumber={setPhone} />
             </div>
             <div className="*:not-first:mt-2">
               <Label htmlFor={`social-${id}`}>Social handle</Label>
@@ -150,7 +158,7 @@ export default function MessageDialog({
             disabled={isPending}
             className="w-full bg-black hover:bg-gray-800 text-white px-8 py-6 text-base font-medium"
           >
-            {isPending ? <Spinner/> : "Send"}
+            {isPending ? <Spinner /> : "Send"}
           </Button>
 
           <Button
@@ -158,6 +166,7 @@ export default function MessageDialog({
             size="lg"
             variant="outline"
             className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium"
+            onClick={handleCancel}
           >
             Cancel
           </Button>

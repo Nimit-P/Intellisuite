@@ -2,6 +2,7 @@
 
 
 import { useId, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
 import { MessageSquareText } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -32,6 +33,13 @@ export default function ContactForm() {
   const [isPending, startTransition] = useTransition();
   const [loading, setLoading] = useState(false);
   const [phone, setPhone] = useState("")
+  const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleCancel = () => {
+    setOpen(false);
+    router.push("/");
+  };
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -68,7 +76,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <p className='transition cursor-pointer'>
           Contact
@@ -148,6 +156,7 @@ export default function ContactForm() {
             size="lg"
             variant="outline"
             className="w-full border-gray-300 text-gray-700 hover:bg-gray-50 px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base font-medium"
+            onClick={handleCancel}
           >
             Cancel
           </Button>

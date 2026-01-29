@@ -56,7 +56,7 @@ const PricingSection = ({
         { text: "Email support" },
       ],
       button: {
-        text: "Start ₹999 Plan",
+        text: "Start Plan",
         url: "#",
       },
     },
@@ -74,7 +74,7 @@ const PricingSection = ({
         { text: "Priority support" },
       ],
       button: {
-        text: "Start ₹2,499 Plan",
+        text: "Start Plan",
         url: "#",
       },
     },
@@ -232,11 +232,7 @@ const PricingSection = ({
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  {plan.name !== "Custom" ? (
-                    <MessageDialog title="Talk to Sales" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText="Talk to Sales" className="w-full" variantType="default" />
-                  ) : (
-                    <MessageDialog title="Talk to Sales" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText="Talk to Sales" className="w-full" variantType="default" />
-                  )}
+                  <MessageDialog title="Start Plan" description="We will connect your accounts and set up the dashboard. A 1-time assisted setup is available on request." triggerText={plan.button.text} className="w-full" variantType="default" />
                 </CardFooter>
               </Card>
             ))}
