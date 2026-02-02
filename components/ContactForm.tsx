@@ -87,11 +87,11 @@ export default function ContactForm() {
           <DialogHeader className="gap-y-2 sm:gap-y-3 md:gap-y-3">
             <div className="space-y-0.5 sm:space-y-1">
               <DialogTitle className="text-left text-base sm:text-lg leading-tight">Global Headquarters:</DialogTitle>
-              <DialogDescription className="text-left text-sm sm:text-base leading-relaxed">Corporate Center,1600 Golf Road, Suite 1200,Rolling Meadow, IL 60008</DialogDescription>
+              <DialogDescription className="text-left text-sm sm:text-base leading-relaxed">27 Ard Na Pairce Theas, Southgreen Road, Kildare, Ireland R51H522</DialogDescription>
             </div>
             <div className="space-y-0.5 sm:space-y-1">
               <DialogTitle className="text-left text-base sm:text-lg leading-tight">India Headquarters</DialogTitle>
-              <DialogDescription className="text-left text-sm sm:text-base leading-relaxed">Corporate Annexe, 8th Floor, #802, Sonawala Lane,Goregoan East, Mumbai 400063</DialogDescription>
+              <DialogDescription className="text-left text-sm sm:text-base leading-relaxed">Corporate Annexe, 8th Floor, #802, Sonawala Lane, Goregoan East, Mumbai 400063</DialogDescription>
             </div>
             <div className="flex items-center gap-2">
               <DialogTitle className="text-base sm:text-lg leading-tight whitespace-nowrap">Email :</DialogTitle>
