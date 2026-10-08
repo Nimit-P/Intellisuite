@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 
 export function WhatsAppFloat() {
     // Replace with your actual WhatsApp number
-    const phoneNumber = "919876543210";
+    const phoneNumber = "917091159242";
     const message = encodeURIComponent("Hi, I'm interested in IntelliSuite. Can you help me?");
 
     return (
