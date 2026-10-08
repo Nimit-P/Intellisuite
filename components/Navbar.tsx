@@ -16,6 +16,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import Image from "next/image"
+import Link from "next/link"
 import ContactForm from "./ContactForm"
 
 // Navigation links array to be used in both desktop and mobile menus
@@ -96,9 +97,9 @@ export default function NavBar() {
           </Popover>
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="text-primary hover:text-primary/90">
+            <Link href="/" className="text-primary hover:text-primary/90">
               <Image src="/intellisuiteLogo.png" width={120} height={60} alt="IntelliSuite Logo" priority />
-            </a>
+            </Link>
           </div>
         </div>
         {/* Middle area */}

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star, Instagram, Linkedin, Globe } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ContactForm from './ContactForm';
 
 export default function Footer() {
@@ -20,12 +21,12 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4 text-gray-400">Product</h3>
               <ul className="space-y-3 text-gray-300">
-                <li><a href="#about-us" className="hover:text-white transition">Platform features</a></li>
-                <li><a href="#about-us" className="hover:text-white transition">Agency solutions</a></li>
-                <li><a href="#about-us" className="hover:text-white transition">Data integrations</a></li>
-                <li><a href="#" className="hover:text-white transition">Compare platforms</a></li>
-                <li><a href="#reviews" className="hover:text-white transition">Reviews</a></li>
-                <li><a href="#pricing" className="hover:text-white transition">Pricing</a></li>
+                <li><Link href="#about-us" className="hover:text-white transition">Platform features</Link></li>
+                <li><Link href="#about-us" className="hover:text-white transition">Agency solutions</Link></li>
+                <li><Link href="#about-us" className="hover:text-white transition">Data integrations</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Compare platforms</Link></li>
+                <li><Link href="#reviews" className="hover:text-white transition">Reviews</Link></li>
+                <li><Link href="#pricing" className="hover:text-white transition">Pricing</Link></li>
               </ul>
             </div>
 
@@ -33,15 +34,15 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4 text-gray-400">Company</h3>
               <ul className="space-y-3 text-gray-300">
-                <li><a href="#team" className="hover:text-white transition">About</a></li>
+                <li><Link href="#team" className="hover:text-white transition">About</Link></li>
                 <li>
-                  <a href="#" className="hover:text-white transition inline-flex items-center gap-2">
+                  <Link href="/" className="hover:text-white transition inline-flex items-center gap-2">
                     Careers
                     <Badge className="bg-blue-600 hover:bg-blue-700 text-xs">Hiring</Badge>
-                  </a>
+                  </Link>
                 </li>
-                <li><a href="#" className="hover:text-white transition">Media Kit</a></li>
-                {/* <li><a href="#" className="hover:text-white transition">Contact</a></li> */}
+                <li><Link href="/" className="hover:text-white transition">Media Kit</Link></li>
+                {/* <li><Link href="/" className="hover:text-white transition">Contact</Link></li> */}
                 <ContactForm />
               </ul>
             </div>
@@ -49,9 +50,9 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4 text-gray-400">Get Started</h3>
               <ul className="space-y-3 text-gray-300">
-                <li><a href="#" className="hover:text-white transition">Start Free Trial</a></li>
-                <li><a href="#cta" className="hover:text-white transition">Book a Demo</a></li>
-                <li><a href="#" className="hover:text-white transition">Quick Start Guide</a></li>
+                <li><Link href="/" className="hover:text-white transition">Start Free Trial</Link></li>
+                <li><Link href="#cta" className="hover:text-white transition">Book a Demo</Link></li>
+                <li><Link href="/" className="hover:text-white transition">Quick Start Guide</Link></li>
               </ul>
             </div>
           </div>
@@ -74,8 +75,8 @@ export default function Footer() {
 
               {/* Right Links */}
               <div className="flex items-center gap-6">
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition">Terms</a>
-                <a href="#" className="text-gray-400 hover:text-white text-sm transition">Privacy</a>
+                <Link href="/" className="text-gray-400 hover:text-white text-sm transition">Terms</Link>
+                <Link href="/" className="text-gray-400 hover:text-white text-sm transition">Privacy</Link>
                 <button className="flex items-center gap-2 border border-gray-700 rounded-full px-4 py-2 text-sm hover:border-gray-600 transition">
                   <Globe className="w-4 h-4" />
                   <span>English</span>
