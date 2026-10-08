@@ -29,7 +29,7 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-              IntelliSuite helps Indian business owners increase profit, reduce leakages, and regain control using business intelligence and smart automation — without hiring a data team. </p>
+              IntelliSuite helps business owners increase profit, reduce leakages, and regain control using business intelligence and smart automation — without hiring a data team. </p>
             <p>
               Sales, expenses, cashflow, inventory, GST, and team performance — consolidated into one simple, founder-friendly view.
             </p>
