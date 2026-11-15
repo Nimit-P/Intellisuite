@@ -3,7 +3,7 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 
 const members = [
     {
-        name: 'Venu Gopal Agarwal',
+        name: 'Shreya Kedia',
         role: 'Chief Technology Officer (CTO)',
         designation: 'Chief Technology Officer (CTO)',
         bio: 'Visionary technology leader overseeing innovation, strategic growth, and sustainable digital transformation across the organization.',

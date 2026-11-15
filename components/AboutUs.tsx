@@ -97,7 +97,7 @@ export default function AboutUS() {
               <div className="text-sm font-medium text-gray-600 mb-2"></div>
               <CardTitle className="text-2xl font-bold mb-2">Who It’s For</CardTitle>
               <CardDescription className="text-base text-gray-600">
-                Built for Indian Businesses like:
+                Built for Businesses like:
               </CardDescription>
             </CardHeader>
             <CardContent className="flex-1 flex flex-col">
@@ -152,7 +152,7 @@ export default function AboutUS() {
 
               <div className="mb-6 px-2">
                 <p className="text-sm text-gray-500 italic">
-                  We understand how Indian businesses really run — part cash, part software, part chaos.
+                  We understand how businesses really run — part cash, part software, part chaos.
                 </p>
               </div>
 
@@ -197,7 +197,7 @@ export default function AboutUS() {
                   },
                   {
                     icon: <Shield className="w-5 h-5" />,
-                    text: "Compliance-ready setup for GDPR and Indian data protection norms",
+                    text: "Compliance-ready setup for GDPR and data protection norms",
                     color: "orange"
                   },
                   {
