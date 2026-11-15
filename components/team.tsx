@@ -19,7 +19,7 @@ const members = [
         skills: ['Financial Planning', 'Strategic Decision Making', 'Cash Flow Management', 'Business Growth']
     },
     {
-        name: 'Siddhart Gupta',
+        name: 'Siddharth Gupta',
         role: 'Chief Data & Analtics Officer (CDAO)',
         designation: 'Chief Data & Analtics Officer (CDAO)',
         bio: "Leading IntelliSuite's data and analytics strategy by transforming complex business information into meaningful insights. Specializing in business intelligence, advanced analytics, and intelligent dashboards that enable better decisions and measurable business performance.",
@@ -56,7 +56,7 @@ function TeamCard({ member }: { member: typeof members[number] }) {
                         {member.primarySkill}
                     </Badge>
                 </div>
-                
+
                 <div className="flex-1 flex flex-col justify-start">
                     <p className="text-[13px] leading-relaxed text-muted-foreground/95 font-medium">
                         {member.bio}
