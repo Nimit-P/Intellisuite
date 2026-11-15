@@ -1,6 +1,6 @@
 "use client"
 
-import { HouseIcon, InfoIcon, User2Icon, LightbulbIcon, BadgeIndianRupee, MessageCircle } from "lucide-react"
+import { HouseIcon, InfoIcon, User2Icon, LightbulbIcon, BadgeDollarSignIcon, MessageCircle, BadgeDollarSign } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
@@ -24,7 +24,7 @@ const navigationLinks = [
   { href: "#hero", label: "Home", icon: HouseIcon, active: true },
   { href: "#about-us", label: "About us", icon: InfoIcon },
   { href: "#team", label: "Team", icon: User2Icon },
-  { href: "#pricing", label: "Pricing", icon: BadgeIndianRupee },
+  { href: "#pricing", label: "Pricing", icon: BadgeDollarSign },
   { href: "#", label: "Contact Us", icon: MessageCircle },
 ]
 

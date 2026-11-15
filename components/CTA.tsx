@@ -31,9 +31,9 @@ export function CTA() {
               description="Book a Business Health Check. We will show templates and onboarding steps."
               triggerText="Book a Business Health Check"
             />
-            <Link href={"https://wa.me/917091159242"}>
+            <Link href={"/live-demo"}>
               <Button size="lg" variant={"outline"} className={`border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium cursor-pointer`}>
-                Chat with Expert
+                See the Platform
               </Button>
             </Link>
           </div>

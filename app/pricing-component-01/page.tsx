@@ -5,8 +5,8 @@ const pricingData = [
     id: 'starter',
     title: 'Starter',
     description: 'Ideal for crypto pros!',
-    monthly: 99,
-    annual: 999
+    monthly: 25,
+    annual: 250
   },
   {
     id: 'professional',

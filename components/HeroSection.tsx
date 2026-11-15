@@ -46,19 +46,19 @@ export default function HeroSection() {
               {/* <MessageDialog
                 title="Chat with an Expert"
                 description="Start a chat over WhatsApp or email. Human support during onboarding."
-                triggerText="Chat with Expert"
+                triggerText="See the Platform"
                 variantType="outline"
                 className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium"
               /> */}
               <Link href={"https://wa.me/917091159242"}>
                 <Button size="lg" variant={"outline"} className={`border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-6 text-base font-medium cursor-pointer`}>
-                  Chat with Expert
+                  See the Platform
                 </Button>
               </Link>
             </div>
 
             {/* Reviews Section */}
-            <div className="flex items-center gap-4 pt-4">
+            {/* <div className="flex items-center gap-4 pt-4">
               <div>
                 <AvatarGroupTooltip />
               </div>
@@ -72,7 +72,7 @@ export default function HeroSection() {
                 </div>
                 <span className="text-sm text-gray-600">From 4000+ Reviews</span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column - Dashboard Cards */}

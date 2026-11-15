@@ -47,8 +47,8 @@ const PricingSection = ({
       id: "basic",
       name: "Basic Plan",
       description: "1 Dashboard",
-      monthlyPrice: 999,
-      yearlyPrice: 9999,
+      monthlyPrice: 25,
+      yearlyPrice: 250,
       features: [
         { text: "1 Dashboard" },
         { text: "Real-time data updates" },
@@ -64,8 +64,8 @@ const PricingSection = ({
       id: "pro",
       name: "Power Plan",
       description: "1 Dashboard + Alerts + Email Summary",
-      monthlyPrice: 2499,
-      yearlyPrice: 24999,
+      monthlyPrice: 100,
+      yearlyPrice: 1000,
       features: [
         { text: "1 Dashboard" },
         { text: "Custom alerts" },
@@ -180,20 +180,20 @@ const PricingSection = ({
                   <div className="flex flex-col gap-2 ">
                     {plan.name === "Enterprise" ? (
                       <div className="flex text-3xl font-bold mt-0 mb-2">
-                        Contact for pricing
+                        Connect for pricing
                       </div>
                     ) : (
                       <>
                         {isYearly && (
                           <div className="flex items-end text-lg text-muted-foreground">
                             <span className="line-through">
-                              ₹{(plan.monthlyPrice * 12).toLocaleString('en-IN')}
+                              ${(plan.monthlyPrice * 12).toLocaleString('en-IN')}
                             </span>
                             <span className="text-sm ml-1">/yr</span>
                           </div>
                         )}
                         <div className="flex items-end text-4xl font-semibold">
-                          <span>₹</span>
+                          <span>$</span>
                           <span>
                             {isYearly ? <SlidingNumber value={plan.yearlyPrice} /> : <SlidingNumber value={plan.monthlyPrice} />}
                           </span>
@@ -209,7 +209,7 @@ const PricingSection = ({
                               {plan.id === "custom" && "🚀"}
                             </span>
                             <span>
-                              Save ₹{(plan.monthlyPrice * 12 - plan.yearlyPrice).toLocaleString('en-IN')}
+                              Save ${(plan.monthlyPrice * 12 - plan.yearlyPrice).toLocaleString('en-IN')}
                             </span>
                           </div>
                         )}

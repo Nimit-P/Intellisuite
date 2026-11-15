@@ -39,9 +39,9 @@ export default function page() {
       <section id="team">
         <TeamSection />
       </section>
-      <section id="reviews">
+      {/*    <section id="reviews">
         <ReviewCardTestimonials />
-      </section>
+      </section>*/}
       <section id="pricing">
         <PricingSection />
       </section>

@@ -4,35 +4,35 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 const members = [
     {
         name: 'Venu Gopal Agarwal',
-        role: 'Chief Technology Officer',
-        designation: 'Chief Technology Officer',
+        role: 'Chief Technology Officer (CTO)',
+        designation: 'Chief Technology Officer (CTO)',
         bio: 'Visionary technology leader overseeing innovation, strategic growth, and sustainable digital transformation across the organization.',
         primarySkill: 'Leadership & Innovation',
         skills: ['Strategic Planning', 'Decision Making', 'Innovation Management', 'Team Leadership']
     },
     {
-        name: 'Kartik Agarwal',
-        role: 'Software Engineer',
-        designation: 'Full Stack Developer',
-        bio: 'Creative and detail-oriented engineer focused on building reliable and user-friendly software that enhances digital experiences.',
-        primarySkill: 'Problem Solving',
-        skills: ['Analytical Thinking', 'Collaboration', 'Adaptability', 'Continuous Learning']
+        name: 'Vivek Sharma',
+        role: 'Chief Financial Officer (CFO)',
+        designation: 'Chief Financial Officer (CFO)',
+        bio: 'Finance professional focused on financial planning, profitability optimization, cash flow management, and strategic business growth. Passionate about leveraging financial insights and data-driven intelligence to help businesses make informed decisions and achieve sustainable success.',
+        primarySkill: 'Financial Strategy & Leadership',
+        skills: ['Financial Planning', 'Strategic Decision Making', 'Cash Flow Management', 'Business Growth']
     },
     {
-        name: 'Shreya Kedia',
-        role: 'Data Scientist',
-        designation: 'Machine Learning Specialist',
-        bio: 'Insight-driven professional passionate about uncovering trends and translating data into actionable business intelligence.',
-        primarySkill: 'Data-Driven Analysis',
-        skills: ['Critical Thinking', 'Curiosity', 'Communication', 'Research Skills']
+        name: 'Siddhart Gupta',
+        role: 'Chief Data & Analtics Officer (CDAO)',
+        designation: 'Chief Data & Analtics Officer (CDAO)',
+        bio: "Leading IntelliSuite's data and analytics strategy by transforming complex business information into meaningful insights. Specializing in business intelligence, advanced analytics, and intelligent dashboards that enable better decisions and measurable business performance.",
+        primarySkill: 'Data Intelligence & Analytics',
+        skills: ['Business Intelligence', 'Data Analytics', 'Al & Automation', 'Decision Intelligence']
     },
     {
-        name: 'Ajin Anthony',
-        role: 'Data Engineer',
-        designation: 'Data Engineer',
-        bio: 'Efficient data strategist with expertise in designing structured solutions to support analytical and business goals.',
-        primarySkill: 'Data Management',
-        skills: ['Attention to Detail', 'Process Optimization', 'Time Management', 'Collaboration']
+        name: 'Saurabh Singh',
+        role: 'Chief Strategy Officer (CSO)',
+        designation: 'Chief Strategy Officer (CSO)',
+        bio: 'Driving business transformation through strategic consulting, operational excellence, and data-driven advisory. Focused on identifying growth opportunities, optimizing business processes, and helping organizations implement practical strategies for long-term profitability and success.',
+        primarySkill: 'Business Consulting & Strategic Advisory',
+        skills: ['Business Consulting', 'Strategic Planning', 'Process Optimization', 'Business Transformation']
     },
 ]
 
