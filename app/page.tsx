@@ -7,7 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/Navbar";
 import { PricingSection } from "@/components/Pricing";
 import TeamSection from "@/components/team";
-import { ReviewCardTestimonials } from "@/components/Testimonals";
+// import { ReviewCardTestimonials } from "@/components/Testimonals";
 import { Feature17 } from "@/components/feature17";
 
 
@@ -41,7 +41,7 @@ export default function page() {
       </section>
       {/*    <section id="reviews">
         <ReviewCardTestimonials />
-      </section>*/}
+      </section>    */}
       <section id="pricing">
         <PricingSection />
       </section>
