@@ -37,29 +37,40 @@ const members = [
 ]
 
 
-function TeamCard({ member }: { member: any }) {
+function TeamCard({ member }: { member: typeof members[number] }) {
     return (
-        <Card className="w-full h-full flex flex-col">
-            <CardHeader>
-                <CardTitle className="flex justify-center text-[20px] font-semibold text-foreground">{member.name}</CardTitle>
-                <CardDescription className="flex justify-center">
-                    <Badge className="text-[#3b82f6] text-md font-semibold" variant={"secondary"}>{member.designation}</Badge>
+        <Card className="w-full h-full flex flex-col justify-between hover:shadow-md transition-shadow">
+            <CardHeader className="text-center pb-2">
+                <CardTitle className="text-xl font-semibold text-foreground text-center">
+                    {member.name}
+                </CardTitle>
+                <CardDescription className="flex items-center justify-center min-h-[44px]">
+                    <Badge className="text-[#3b82f6] text-xs sm:text-sm font-semibold text-center whitespace-normal leading-tight" variant="secondary">
+                        {member.designation}
+                    </Badge>
                 </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-5 flex-1 flex flex-col">
-                <div className="flex justify-center">
-                    <Badge className="flex justify-center text-secondary-foreground" variant='outline'>{member.primarySkill}</Badge>
+            <CardContent className="flex-1 flex flex-col pt-2 gap-4">
+                <div className="flex items-center justify-center min-h-[44px]">
+                    <Badge className="text-secondary-foreground text-center whitespace-normal leading-tight" variant='outline'>
+                        {member.primarySkill}
+                    </Badge>
                 </div>
-                <div className="flex justify-start tracking-tight">
-                    <p className="text-[13px]/5 text-muted-foreground/95 font-medium">
+                
+                <div className="flex-1 flex flex-col justify-start">
+                    <p className="text-[13px] leading-relaxed text-muted-foreground/95 font-medium">
                         {member.bio}
                     </p>
                 </div>
 
-                <div className="flex justify-start gap-2 mt-3 flex-wrap">
-                    {member.skills.map((skill: string, index: number) => (
-                        <Badge key={index} className="text-secondary-foreground" variant='secondary'>{skill}</Badge>
-                    ))}
+                <div className="mt-auto pt-4 border-t border-border/40">
+                    <div className="flex flex-wrap items-center justify-start gap-1.5 min-h-[60px] content-start">
+                        {member.skills.map((skill: string, index: number) => (
+                            <Badge key={index} className="text-secondary-foreground text-xs" variant='secondary'>
+                                {skill}
+                            </Badge>
+                        ))}
+                    </div>
                 </div>
             </CardContent>
         </Card>
@@ -68,21 +79,23 @@ function TeamCard({ member }: { member: any }) {
 
 export default function TeamSection() {
     return (
-        <section className="py-12 md:py-25 ">
-
-            <div className='mb-12 text-center sm:mb-16 lg:mb-24'>
-                <h2 className='mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl'>Get to Know Our Amazing Team</h2>
-                <p className='text-muted-foreground text-xl'>
+        <section className="py-12 md:py-24">
+            <div className='mb-12 text-center sm:mb-16 lg:mb-20 px-4'>
+                <h2 className='mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl text-foreground'>
+                    Get to Know Our Amazing Team
+                </h2>
+                <p className='text-muted-foreground text-lg sm:text-xl max-w-3xl mx-auto'>
                     Meet the Passionate Experts Behind Our Success and Learn More About Their Roles.
                 </p>
             </div>
 
-            <div className=" px-4 sm:px-8 md:px-12 lg:px-20 p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-fr">
-                {members.map((member, index) => (
-                    <TeamCard key={index} member={member} />
-                ))}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                    {members.map((member, index) => (
+                        <TeamCard key={index} member={member} />
+                    ))}
+                </div>
             </div>
-
         </section>
     )
 }
